@@ -1,23 +1,28 @@
 "use client";
-import { useRef, type ReactElement } from "react";
+
+import { type ReactElement } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { SectionHeader } from "./SectionHeader";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import "./CustomPagination.style.scss";
 
 const MOCK_SLIDES = [0, 0, 0, 0];
 
-export const MobileSwiper = (): ReactElement => {
-  const paginationRef = useRef(null);
+export const MobileSwiper = ({
+  paginationId,
+}: {
+  paginationId: string;
+}): ReactElement => {
   return (
-    <div className="bg-tri-petch-light-grey pt-2 pb-8">
+    <div className="bg-tri-petch-light-grey pt-4 pb-8">
       <Swiper
         modules={[Pagination]}
         spaceBetween={50}
         slidesPerView={1}
-        pagination={{ clickable: true, el: paginationRef.current }}
+        pagination={{ el: `#${paginationId}`, clickable: true }}
       >
         {MOCK_SLIDES.map((slide, index) => (
           <SwiperSlide key={`slide-${index}`}>
@@ -38,7 +43,7 @@ export const MobileSwiper = (): ReactElement => {
         ))}
       </Swiper>
       <div className="mt-6 w-full container flex justify-center gap-4">
-        <div ref={paginationRef} className="pagination"></div>
+        <div id={paginationId}></div>
       </div>
     </div>
   );

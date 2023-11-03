@@ -27,7 +27,7 @@ export const AthlesSection = ({
               <img
                 src="/american-football.png"
                 alt="american-football.png"
-                className="h-full max-h-[555px] md:max-h-none"
+                className="h-full max-h-[466px] md:max-h-none"
               />
             </div>
           </div>
@@ -56,7 +56,7 @@ export const AthlesSection = ({
           </div>
         ))
       ) : (
-        <MobileSwiper />
+        <MobileSwiper paginationId="pagination-athlets" />
       )}
     </section>
   );

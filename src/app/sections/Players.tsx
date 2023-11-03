@@ -24,7 +24,7 @@ export const PlayersSection = ({
             <img
               src="/basketball.png"
               alt="basketball.png"
-              className="h-full max-h-[555px] md:max-h-none"
+              className="h-full max-h-[466px] md:max-h-none"
             />
           </div>
         </div>
@@ -52,7 +52,7 @@ export const PlayersSection = ({
           </div>
         ))
       ) : (
-        <MobileSwiper />
+        <MobileSwiper paginationId="pagination-player" />
       )}
     </section>
   );
