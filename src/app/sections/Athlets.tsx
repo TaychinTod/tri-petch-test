@@ -5,6 +5,7 @@ import { ATHLETS_SECTION_INFO } from "../constant";
 import { MobileSwiper, SectionHeader } from "../components";
 import { useMediaQuery } from "usehooks-ts";
 import { useSsrCompatible } from "../hooks";
+import { AmericaFoodball } from "../components/images";
 
 export const AthlesSection = ({
   className,
@@ -19,16 +20,11 @@ export const AthlesSection = ({
           ATHLETS
         </h1>
       </div>
-
       <div className="md:absolute relative lg:inset-0 lg:top-[12%] md:-left-[24%] md:bottom-0 z-10 flex items-center justify-center md:px-0 px-12 ">
         <div className="lg:container md:grid lg:grid-cols-2 md:grid-cols-12 ">
           <div className="lg:col-span-1 md:col-span-7">
             <div className="md:h-[95%] lg:h-full md:mr-4 lg:mr-0">
-              <img
-                src="/american-football.png"
-                alt="american-football.png"
-                className="h-full max-h-[466px] md:max-h-none"
-              />
+              <AmericaFoodball />
             </div>
           </div>
         </div>

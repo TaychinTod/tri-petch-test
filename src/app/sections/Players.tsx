@@ -5,6 +5,7 @@ import { PLAYERS_SECTION_INFO } from "../constant";
 import { MobileSwiper, SectionHeader } from "../components";
 import { useMediaQuery } from "usehooks-ts";
 import { useSsrCompatible } from "../hooks";
+import { BasketBallImage } from "../components/images";
 
 export const PlayersSection = ({
   className,
@@ -21,11 +22,7 @@ export const PlayersSection = ({
       <div className="md:absolute relative lg:inset-0 lg:top-[-24%] lg:-right-[220px] md:-right-[24%] md:bottom-[35%] flex items-center justify-center md:px-0 px-12 z-10">
         <div className="lg:container grid md:grid-cols-12 ">
           <div className="xl:col-start-5 lg:col-start-4 lg:col-span-12 md:col-start-6 md:col-span-8">
-            <img
-              src="/basketball.png"
-              alt="basketball.png"
-              className="h-full max-h-[466px] md:max-h-none"
-            />
+            <BasketBallImage />
           </div>
         </div>
       </div>
