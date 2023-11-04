@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 export const AmericaFoodball = (): ReactElement => {
   return (
     <div className="relative">
-      <div className="-z-10 top-[35%] right-[-25%] absolute -rotate-45 w-[400px] border-b-4 border-tri-petch-purple"></div>
+      <div className="lg:hidden -z-10 top-[40%] right-[-25%] absolute -rotate-45 w-[150%] border-b-[3px] md:border-b-4 border-tri-petch-purple"></div>
 
       {/* full cross */}
       <svg
@@ -12,7 +12,7 @@ export const AmericaFoodball = (): ReactElement => {
         height="17"
         viewBox="0 0 17 17"
         fill="none"
-        className="absolute left-[15%] top-[8%]"
+        className="absolute left-[15%] top-[8%] md:top-[-5%] md:left-[60%] lg:hidden"
       >
         <mask
           id="path-1-outside-1_0_110"
@@ -49,7 +49,7 @@ export const AmericaFoodball = (): ReactElement => {
         height="17"
         viewBox="0 0 17 17"
         fill="none"
-        className="absolute left-[5%] top-[5%]"
+        className="absolute left-[5%] top-[5%] md:top-[-6%] md:left-[55%] lg:hidden"
       >
         <g opacity="0.3">
           <mask
@@ -85,7 +85,7 @@ export const AmericaFoodball = (): ReactElement => {
       <img
         src="/american-football.png"
         alt="american-football.png"
-        className="h-full max-h-[466px] md:max-h-none"
+        className="h-full md:h-[80%] lg:h-full max-h-[466px] md:max-h-none max-w-[55vw]"
       />
     </div>
   );

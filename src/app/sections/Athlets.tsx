@@ -20,10 +20,10 @@ export const AthlesSection = ({
           ATHLETS
         </h1>
       </div>
-      <div className="md:absolute relative lg:inset-0 lg:top-[12%] md:-left-[24%] md:bottom-0 z-10 flex items-center justify-center md:px-0 px-12 ">
+      <div className="md:absolute relative lg:inset-0 lg:top-[12%] md:-left-[22%] md:bottom-0 z-10 flex items-center justify-center md:px-0 px-12 ">
         <div className="lg:container md:grid lg:grid-cols-2 md:grid-cols-12 ">
           <div className="lg:col-span-1 md:col-span-7">
-            <div className="md:h-[95%] lg:h-full md:mr-4 lg:mr-0">
+            <div className="relative md:h-[95%] lg:h-full right-0 md:right-4 lg:right-32 xl:right-0">
               <AmericaFoodball />
             </div>
           </div>
@@ -52,7 +52,10 @@ export const AthlesSection = ({
           </div>
         ))
       ) : (
-        <MobileSwiper paginationId="pagination-athlets" />
+        <MobileSwiper
+          paginationId="pagination-athlets"
+          slides={ATHLETS_SECTION_INFO}
+        />
       )}
     </section>
   );

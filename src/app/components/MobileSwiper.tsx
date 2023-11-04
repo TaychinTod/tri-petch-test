@@ -11,10 +11,22 @@ import "./CustomPagination.style.scss";
 
 const MOCK_SLIDES = [0, 0, 0, 0];
 
+type Slides = {
+  id: Number;
+  title: string;
+  description: string;
+  backgroundColorClass?: string;
+  textColor?: string;
+  numberUnderlineClass?: string;
+  numberClass?: string;
+};
+
 export const MobileSwiper = ({
   paginationId,
+  slides,
 }: {
   paginationId: string;
+  slides: Slides[];
 }): ReactElement => {
   return (
     <div className="bg-tri-petch-light-grey pt-4 pb-8">
@@ -24,20 +36,15 @@ export const MobileSwiper = ({
         slidesPerView={1}
         pagination={{ el: `#${paginationId}`, clickable: true }}
       >
-        {MOCK_SLIDES.map((slide, index) => (
-          <SwiperSlide key={`slide-${index}`}>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={`slide-${slide.id}`}>
             <div className="container">
               <SectionHeader
-                title={"mock"}
+                title={slide.title}
                 runingNumber={index + 1}
                 numberUnderlineClass="bg-tri-petch-light-purple"
               />
-              <p className="mt-4">
-                Work with other student athletes to increase visability. When
-                you share and like other players videos it will increase your
-                visability as a player. This is the team work aspect to Surface
-                1.
-              </p>
+              <p className="mt-4">{slide.description}</p>
             </div>
           </SwiperSlide>
         ))}

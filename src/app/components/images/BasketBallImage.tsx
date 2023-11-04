@@ -2,9 +2,9 @@ import { ReactElement } from "react";
 
 export const BasketBallImage = (): ReactElement => {
   return (
-    <div className="relative">
-      <div className="-z-10 top-[35%] right-0 absolute -rotate-45 w-[400px] border-b-4 border-tri-petch-purple"></div>
-      <div className="-z-10 bottom-[35%] left-0 absolute -rotate-45 w-[400px] border-b-4 border-tri-petch-purple"></div>
+    <div className="relative pb-24 md:pb-0">
+      <div className="-z-10 top-[23%] right-[6%] absolute -rotate-45 w-[34%] border-b-[3px] md:border-b-4 border-tri-petch-purple"></div>
+      <div className="-z-10 bottom-[30%] left-[5%] absolute -rotate-45 w-[50%] border-b-[3px] md:border-b-4 border-tri-petch-purple"></div>
       {/* full cross */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +12,7 @@ export const BasketBallImage = (): ReactElement => {
         height="17"
         viewBox="0 0 17 17"
         fill="none"
-        className="absolute left-[12%] top-[8%]"
+        className="absolute left-[12%] top-[8%] md:left-[27%] md:top-[12%]"
       >
         <mask
           id="path-1-outside-1_0_110"
@@ -86,7 +86,7 @@ export const BasketBallImage = (): ReactElement => {
         height="17"
         viewBox="0 0 17 17"
         fill="none"
-        className="absolute left-[5%] top-[5%]"
+        className="absolute left-[5%] top-[5%] md:left-[30%] md:top-[15%]"
       >
         <g opacity="0.3">
           <mask

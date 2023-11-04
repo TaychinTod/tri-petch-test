@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: ReactNode }): ReactElement => {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body className={roboto.className}>{children}</body>
     </html>
   );

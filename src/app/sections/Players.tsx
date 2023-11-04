@@ -49,7 +49,10 @@ export const PlayersSection = ({
           </div>
         ))
       ) : (
-        <MobileSwiper paginationId="pagination-player" />
+        <MobileSwiper
+          paginationId="pagination-player"
+          slides={PLAYERS_SECTION_INFO}
+        />
       )}
     </section>
   );
